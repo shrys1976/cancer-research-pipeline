@@ -1,0 +1,1 @@
+# STRING network rule file

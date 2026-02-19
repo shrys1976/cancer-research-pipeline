@@ -1,0 +1,124 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Snakemake
+.snakemake/
+snakemake.log
+.snakemake_timestamp
+.snakemake_metadata/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# R
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj.user
+
+# Data files (uncomment if you don't want to track data)
+# *.csv
+# *.tsv
+# *.xlsx
+# *.xls
+# *.h5
+# *.hdf5
+
+# Results and outputs
+results/**/*
+!results/**/.gitkeep
+*.log
+*.out
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+*.env
+
+# Conda
+.conda/
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Profiling
+*.prof
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Large files
+*.gz
+*.zip
+*.tar
+*.tar.gz
+*.bz2
+*.7z
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
