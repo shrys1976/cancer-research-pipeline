@@ -1,1 +1,59 @@
-# Configuration file for cancer research pipeline
+project:
+  disease: "CANCER"
+  organism_taxid: "9606"
+  organism_gp: "hsapiens"
+  seed_manifest: "manifests/cancer_seed_sources.yaml"
+
+string:
+  api_base: "https://string-db.org/api"
+  format: "tsv"
+  required_score: 700
+  partner_limit: 100
+  timeout_seconds: 30
+  retries: 3
+  cache_dir: "resources/cache/string"
+
+seed_processing:
+  input_tsv: "resources/raw/cancer/cancer_seeds.tsv"
+  default_weight: 1.0
+  uniprot_api: "https://rest.uniprot.org/uniprotkb/search"
+  timeout_seconds: 30
+  retries: 3
+
+propagation:
+  method: "rwr"
+  restart_probability: 0.5
+  max_iter: 200
+  tol: 1e-9
+
+proximity:
+  n_permutations: 1000
+  random_seed: 42
+  fdr_method: "bh"
+  alpha: 0.05
+
+clustering:
+  methods:
+    - "leiden"
+    - "louvain"
+  resolution: 1.0
+  random_seed: 42
+
+psicquic:
+  endpoint: "https://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query"
+  queries:
+    - "cancer"
+    - "tumor"
+    - "neoplasm"
+  max_lines: 2000
+  cache_dir: "resources/cache/psicquic"
+
+enrichment:
+  backend: "gprofiler"
+  api_url: "https://biit.cs.ut.ee/gprofiler/api/gost/profile/"
+  sources: ["GO:BP", "REAC"]
+  user_threshold: 0.05
+  cache_dir: "resources/cache/gprofiler"
+
+runtime:
+  emit_metadata: true

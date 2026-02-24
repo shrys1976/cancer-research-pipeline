@@ -1,1 +1,5 @@
-# Cancer seed sources manifest
+CANCER:
+  - name: "starter_cancer_seed_template"
+    tsv: "resources/raw/cancer/cancer_seeds.tsv"
+    description: "Starter placeholder list (~40 genes) for template-driven ingestion."
+    source: "curated_placeholder_cancer_list"

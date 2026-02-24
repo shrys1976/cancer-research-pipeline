@@ -1,0 +1,20 @@
+name: network
+
+channels:
+
+ - conda-forge
+ - bioconda
+
+dependencies:
+
+ - python=3.11
+ - pandas
+ - numpy
+ - networkx
+ - igraph
+ - leidenalg
+
+ - pip
+
+ - pip:
+    - python-louvain

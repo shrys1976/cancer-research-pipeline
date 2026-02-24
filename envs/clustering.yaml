@@ -1,0 +1,12 @@
+name: clustering
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas
+  - networkx
+  - python-igraph
+  - leidenalg
+  - pip
+  - pip:
+    - python-louvain
